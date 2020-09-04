@@ -3,4 +3,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Futuro portal clientes!!")
+    return HttpResponse("Futuro portal de clientes!!")

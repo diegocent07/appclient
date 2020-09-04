@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import pyodbc
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,8 +80,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # values you got from step 2 from your Mirosoft app
-MICROSOFT_AUTH_CLIENT_ID = '74a119a7-cc1e-4ebe-a0ee-1029f24c8a2b'
-MICROSOFT_AUTH_CLIENT_SECRET = 'ISvI1cSNkyfxN0WM+pE1HkHla0wrwUhLGp/1+1d78rc='
+MICROSOFT_AUTH_CLIENT_ID = 'a55e77a8-8c46-46b5-a7f0-e5fb5433cdec'
+MICROSOFT_AUTH_CLIENT_SECRET = 'LX9T-DOh0e69C-Nq1czR.qCprq1N.-Q-j3'
 # Tenant ID is also needed for single tenant applications
 MICROSOFT_AUTH_TENANT_ID = '0a41374d-65bd-4b4a-a58b-17b11bde23d0'
 
@@ -95,10 +98,20 @@ WSGI_APPLICATION = 'appclient.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'dbclientes',
+        'HOST': 'clientesdb.database.windows.net',
+        'USER': 'topdev',
+        'PASSWORD': 'Dev0905$SP',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'MARS_Connection': True,
+        },
+
     }
 }
+DATABASE_CONNECTION_POOLING = False
 
 
 # Password validation
@@ -132,6 +145,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SITE_ID = 1
 
 
 # Static files (CSS, JavaScript, Images)
