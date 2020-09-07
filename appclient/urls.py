@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf import settings
+import portal.views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('portal.urls')),
+    #path('', portal.views.index, name='index'),
     path('microsoft/', include('microsoft_auth.urls', namespace='microsoft')),
+    path('', include('portal.urls')),
+
+    #path('post/<int:pk>/', portal.views.post_detail, name='post_detail'),
 ]

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import pyodbc
+import os
+
 
 
 
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'microsoft_auth',
+    'portal.apps.PortalConfig',
 ]
 
 MIDDLEWARE = [
@@ -106,12 +109,12 @@ DATABASES = {
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
-            'MARS_Connection': True,
+            
         },
 
     }
 }
-DATABASE_CONNECTION_POOLING = False
+
 
 
 # Password validation
@@ -153,3 +156,6 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+MEDIA_URL = '/images/'
