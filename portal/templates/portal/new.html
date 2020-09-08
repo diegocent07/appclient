@@ -1,13 +1,5 @@
-{% extends 'portal/index.html' %}
-
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div">
-                {{ post.Title }}
-            </div>
-            <h2><a href="{% url 'new' pk=post.pk %}">{{ post.Title }}</a></h2>
-            
-        </div>
-    {% endfor %}
+
+<p>enviado</p>
+
 {% endblock %}

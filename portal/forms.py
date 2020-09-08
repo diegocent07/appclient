@@ -1,7 +1,30 @@
-from django import forms
+from django.forms import ModelForm
 from .models import Datosclientes
 
-class PostForm(forms.Form):
+
+class ClientForm(ModelForm):
+    class Meta:
+        model = Datosclientes
+        fields = '__all__'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""" class PostForm(forms.Form):
 
     Title = forms.CharField(label='Cliente', max_length=20, widget=forms.TextInput(attrs={
         'class':'form-control', 'placeholder': 'Cliente',
@@ -14,15 +37,8 @@ class PostForm(forms.Form):
     }))
     Facturaranombrede = forms.CharField(label='Facturar a nombre de', max_length=20, widget=forms.TextInput(attrs={
         'class':'form-control', 'placeholder': 'Fact a nombre de',
-    }))
+    })) """
 
-    """ def registrar_datos(self):
-        registro_datos = Datosclientes(Title=self.data['Title'],
-        Direcc=self.data['Direcc'],
-        DireccFact=self.data['DireccFact'],
-        Facturaranombrede=self.data['Facturaranombrede'])
-        registro_datos.save()
-        return 'Registro de datos exitoso!' """
     
     
 
