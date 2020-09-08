@@ -1,4 +1,5 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput
+from django.utils.translation import gettext_lazy as _
 from .models import Datosclientes
 
 
@@ -6,6 +7,21 @@ class ClientForm(ModelForm):
     class Meta:
         model = Datosclientes
         fields = '__all__'
+        labels = {
+            'Title': _('Cliente'),
+            'Docnro': _('RUC/DNI/CI/RG'),
+            'Direcc': _('Dirección'),
+            'DireccFact': _('Dirección de facturación'),
+            'Facturaranombrede': _('Facturar a nombre de'),
+            'comprobantep': _('Comprobante de pago'),
+        }
+        widgets = {
+            'Title': TextInput(attrs={'class':'form-control'}),
+            'Docnro': TextInput(attrs={'class':'form-control'}),
+            'Direcc': TextInput(attrs={'class':'form-control'}),
+            'DireccFact': TextInput(attrs={'class':'form-control'}),
+            'Facturaranombrede': TextInput(attrs={'class':'form-control'}),
+        }
 
 
 
