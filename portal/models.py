@@ -7,11 +7,11 @@ from django.core.files.storage import FileSystemStorage
 
 class Datosclientes(models.Model):
     Title = models.CharField(max_length=20)
-    Docnro = models.IntegerField(default=None)
+    Docnro = models.CharField(max_length=15)
     Direcc = models.CharField(max_length=35)
     DireccFact = models.CharField(max_length=40)
     Facturaranombrede = models.CharField(max_length=20)
-    comprobantep = models.FileField(upload_to='images',blank=True)
+    comprobantep = models.FileField(upload_to='images/')
     def __str__(self):
         return self.Title
 

@@ -13,7 +13,7 @@
     <div class='jumbotron'>
         <center>
             <div class="text-left" style="max-width:500px">
-                <form action="{% url 'index' %}" method="POST">
+                <form action="{% url 'index' %}" method="POST" enctype="multipart/form-data">
                 
                 <div class='form-group'>
                   {% csrf_token %}

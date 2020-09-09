@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ClientForm
 from django.contrib import messages
-
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 def createOrder(request):
