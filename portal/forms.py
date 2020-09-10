@@ -10,6 +10,8 @@ class ClientForm(ModelForm):
         labels = {
             'Title': _('Cliente'),
             'Docnro': _('RUC/DNI/CI/RG'),
+            'telefono': _('Teléfono'),
+            'email': _('Correo electrónico'),
             'Direcc': _('Dirección'),
             'DireccFact': _('Dirección de facturación'),
             'Facturaranombrede': _('Facturar a nombre de'),
@@ -18,6 +20,8 @@ class ClientForm(ModelForm):
         widgets = {
             'Title': TextInput(attrs={'class':'form-control'}),
             'Docnro': TextInput(attrs={'class':'form-control'}),
+            'telefono': TextInput(attrs={'class':'form-control'}),
+            'email': TextInput(attrs={'class':'form-control'}),
             'Direcc': TextInput(attrs={'class':'form-control'}),
             'DireccFact': TextInput(attrs={'class':'form-control'}),
             'Facturaranombrede': TextInput(attrs={'class':'form-control'}),
