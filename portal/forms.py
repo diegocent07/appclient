@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, FileInput
 from django.utils.translation import gettext_lazy as _
 from .models import Datosclientes
 
@@ -22,8 +22,8 @@ class ClientForm(ModelForm):
         widgets = {
             'Title': TextInput(attrs={'class':'form-control'}),
             'Docnro': TextInput(attrs={'class':'form-control'}),
-            'docladoa':FileInput((attrs={'class':'form-control'}),
-            'docladob':FileInput((attrs={'class':'form-control'}),
+            'docladoa':FileInput(attrs={'class':'form-control'}),
+            'docladob':FileInput(attrs={'class':'form-control'}),
             'telefono': TextInput(attrs={'class':'form-control'}),
             'email': TextInput(attrs={'class':'form-control'}),
             'Direcc': TextInput(attrs={'class':'form-control'}),
