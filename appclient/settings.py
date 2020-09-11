@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'microsoft_auth',
     'portal.apps.PortalConfig',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -156,7 +157,7 @@ SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+""" STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
@@ -168,4 +169,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL = '/images/'
+MEDIA_URL = '/images/' """
+
+DEFAULT_FILE_STORAGE = 'appclient.azure.AzureMediaStorage'
+STATICFILES_STORAGE = 'appclient.azure.AzureStaticStorage'
+
+STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
+
+AZURE_ACCOUNT_NAME = "djazcentral"
+AZURE_CUSTOM_DOMAIN = f'djazcentral.blob.core.windows.net'
+STATIC_URL = f'https://djazcentral.blob.core.windows.net/static/'
+MEDIA_URL = f'https://djazcentral.blob.core.windows.net/media/'
