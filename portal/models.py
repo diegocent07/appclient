@@ -8,8 +8,8 @@ from django.core.files.storage import FileSystemStorage
 class Datosclientes(models.Model):
     Title = models.CharField(max_length=20)
     Docnro = models.CharField(max_length=15)
-    docladoa = models.FileField(upload_to='images/', required=False)
-    docladob = models.FileField(upload_to='images/', required=False)
+    docladoa = models.FileField(upload_to='images/')
+    docladob = models.FileField(upload_to='images/')
     telefono = models.CharField(max_length=25)
     email = models.EmailField(max_length=50)
     Direcc = models.CharField(max_length=35)
