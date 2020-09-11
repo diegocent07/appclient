@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 's%t$-+zk9nh%_4%)u2b=r!x+74_w_k&qn2*yhpj7u96i$)^b-q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -176,7 +176,7 @@ STATICFILES_STORAGE = 'appclient.azure.AzureStaticStorage'
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"
-
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 AZURE_ACCOUNT_NAME = "djazcentral"
 AZURE_CUSTOM_DOMAIN = f'djazcentral.blob.core.windows.net'
 STATIC_URL = f'https://djazcentral.blob.core.windows.net/static/'
