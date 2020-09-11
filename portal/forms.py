@@ -10,6 +10,8 @@ class ClientForm(ModelForm):
         labels = {
             'Title': _('Cliente'),
             'Docnro': _('RUC/DNI/CI/RG'),
+            'docladoa': _('Lado frontal del documento'),
+            'docladob': _('Lado reverso del documento'),
             'telefono': _('Teléfono'),
             'email': _('Correo electrónico'),
             'Direcc': _('Dirección'),

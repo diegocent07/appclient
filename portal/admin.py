@@ -5,7 +5,7 @@ from django.contrib import admin
 from .models import Datosclientes
 
 class ClientesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'Title', 'Docnro', 'email', 'Direcc', 'telefono', 'comprobantep')
+    list_display = ('id', 'Title', 'Docnro', 'docladoa', 'email', 'Direcc', 'telefono', 'comprobantep')
     list_display_links = ('id', 'Title')
     search_fields = ('Title', 'Docnro','Direcc')
     list_per_page = 20
