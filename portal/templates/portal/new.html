@@ -9,8 +9,8 @@
 {% block content %}
     <div class="container text-center pt-5 secc1">
         <p style="color: aliceblue;">Datos enviados correctamente. Gracias por su preferencia.</p>
-        
+        <button type="button" class="btn btn-secondary"><a href="{% url 'index' %}">Volver al inicio</a></button>
     </div>
-    <a href="{% url 'index' %}">Volver al inicio</a>
+    
 {% endblock %}
 </html>
