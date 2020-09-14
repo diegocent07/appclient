@@ -1,3 +1,36 @@
+
 .secc1 {
-    background-color: brown;
+    background-color: #87092F ;
 }
+
+body{
+    background-color: lightsteelblue;
+}
+
+.cuadrotop{
+    background-color: #b0c4de;
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.padre{
+    text-align: center;
+}
+
+.hijo{
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.cuadrocentro{
+    margin-left: 60px;
+    display: inline-block, center;
+    background-color: lightsteelblue;
+}
+
+footer{
+    background-color: lightsteelblue;
+    text-align: center;
+  }
