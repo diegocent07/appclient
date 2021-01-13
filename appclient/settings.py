@@ -84,11 +84,11 @@ AUTHENTICATION_BACKENDS = [
     # I recommend keeping this with at least one database superuser in case of unable to use others
 ]
 
-# values you got from step 2 from your Mirosoft app
-MICROSOFT_AUTH_CLIENT_ID = 'a55e77a8-8c46-46b5-a7f0-e5fb5433cdec'
-MICROSOFT_AUTH_CLIENT_SECRET = 'LX9T-DOh0e69C-Nq1czR.qCprq1N.-Q-j3'
+# values you got from step 2 from your Mirosoft app(Example format)
+MICROSOFT_AUTH_CLIENT_ID = 'a78e77a8-8c46-46b5-a7f0-e5fb5433cdec'
+MICROSOFT_AUTH_CLIENT_SECRET = 'LP9T-DOh0e69C-Nq1czR.qCprq1N.-Q-j3'
 # Tenant ID is also needed for single tenant applications
-MICROSOFT_AUTH_TENANT_ID = '0a41374d-65bd-4b4a-a58b-17b11bde23d0'
+MICROSOFT_AUTH_TENANT_ID = '0a41374d-65bd-4b4a-a58b-17b11brt23d0'
 
 # pick one MICROSOFT_AUTH_LOGIN_TYPE value
 # Microsoft authentication
@@ -100,14 +100,14 @@ WSGI_APPLICATION = 'appclient.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# Conn example.
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'dbclientes',
+        'NAME': 'dbcliente',
         'HOST': 'clientesdb.database.windows.net',
-        'USER': 'topdev',
-        'PASSWORD': 'Dev0905$SP',
+        'USER': 'azdev',
+        'PASSWORD': 'Devsazure0905$SP',
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
